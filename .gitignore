@@ -1,0 +1,15 @@
+# Java, Gradle and IntelliJ
+.gradle/
+.build/
+.idea/
+.idea
+gradle
+Scratches and Consoles/
+External Libraries/
+
+# Misc
+build.gradle
+gradlew
+gradlew.bat
+settings.gradle
+build/
