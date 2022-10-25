@@ -26,4 +26,15 @@ class AppTest {
         );
     }
 
+    @Test
+    @DisplayName("Case to test if numbers are printed from 1 to number entered by user")
+    void replaceNums(){
+        ArrayList<Object> arrayList = new ArrayList<>();
+
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        assertEquals(arrayList, App.replaceNums(3));
+
+    }
 }
