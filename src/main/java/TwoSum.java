@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /*
 - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -26,6 +28,7 @@ public class TwoSum {
         TwoSum twoSum = new TwoSum();
         int[] num = {1,2,3};
         System.out.println(Arrays.toString(twoSum.elemSum(num, 3)));
+        System.out.println(Arrays.toString(twoSum.hashSum(num, 4)));
     }
 
     public int[] elemSum(int[] arr, int target){
@@ -35,6 +38,19 @@ public class TwoSum {
                     return new int[] {j, k};
                 }
             }
+        }
+        return null;
+    }
+
+    public int[] hashSum(int[] arr, int target){
+        Map<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < arr.length; i++){
+            int diff = target - arr[i];
+
+            if (hashMap.containsKey(diff)){
+                return new int[] {hashMap.get(diff), i};
+            }
+            hashMap.put(arr[i], i);
         }
         return null;
     }
